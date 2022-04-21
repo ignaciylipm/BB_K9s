@@ -1,0 +1,535 @@
+#########################################
+## Definición de los colores generales ##
+#########################################
+color_ricoh: cf142b
+color_cgsi: 006ccf
+## Color de fondo de la portada
+color_fondo_portada: FFFFFF
+## Color de fondo de general
+color_fondo_portada: FFFFFF
+## Colores para las tablas
+table_header_color: $color_ricoh
+
+###########################################
+## Definición de las imagenes a utilizar ##
+###########################################
+## Imagen de logo de la portada
+logo_portada: ricoh_logo.svg
+## Imagen de fondo de la portada
+fondo_portada: 
+## Imagen de fondo de contenido
+fondo_contenido: 
+## Imagen de cabecera
+logo_cabecera: ricoh_logo.svg
+
+##########################################
+## Definición de las fuentes a utilizar ##
+##########################################
+font:
+  catalog:
+    Noto Serif:
+      normal: notoserif-regular-subset.ttf
+      bold: notoserif-bold-subset.ttf
+      italic: notoserif-italic-subset.ttf
+      bold_italic: notoserif-bold_italic-subset.ttf
+    M+ 1mn:
+      normal: mplus1mn-regular-ascii-conums.ttf
+      bold: mplus1mn-bold-ascii.ttf
+      italic: mplus1mn-italic-ascii.ttf
+      bold_italic: mplus1mn-bold_italic-ascii.ttf
+    M+ 1p Fallback:
+      normal: mplus1p-regular-fallback.ttf
+      bold: mplus1p-regular-fallback.ttf
+      italic: mplus1p-regular-fallback.ttf
+      bold_italic: mplus1p-regular-fallback.ttf
+
+##########################
+## Parametrización base ##
+##########################
+base:
+  #align: justify
+  align: left
+  font-color: 000044
+#  font-family: Times-Roman
+  font_family: Noto Serif
+  font-size: 8
+  #line-height-length: 17
+  line-height-length: 12
+  line-height: $base_line_height_length / $base_font_size
+  font-size-large: round($base_font_size * 1.25)
+  font-size-small: round($base_font_size * 0.85)
+  font-size-min: $base_font_size * 0.75
+  font-style: normal
+  border-color: 2f2f33
+  border-radius: 4
+  border-width: 0.5
+
+role:
+  head-font-16:
+    font-color: 000000
+    font-size: $base_font-size + 6
+  head-font-14:
+    font-color: 000000
+    font-size: $base_font-size + 4
+  head-font-12:
+    font-color: 000000
+    font-size: $base_font-size + 2
+  head-font-10:
+    font-color: 000000
+    font-size: $base_font-size
+
+vertical-rhythm: $base_line_height_length
+horizontal-rhythm: $base_line_height_length
+vertical-spacing: $vertical_rhythm
+
+#############
+## Heading ##
+#############
+heading:
+  align: left
+  h1:
+    font-size: $base_font-size + 20
+    font-color: 000000
+    font-family: Times-Roman
+    font-style: bold_italic
+    text-transform: none
+  h2:
+    font-size: $base_font-size + 14
+    font-color: 000000
+    font-family: $heading_h1_font_family
+    font-style: bold
+    text-transform: $heading_h1_text_transform
+  h3:
+    font-size: $base_font-size + 10
+    font-color: 000000
+    font-family: $heading_h1_font_family
+    font-style: bold
+    text-transform: $heading_h1_text_transform
+  h4:
+    font-size: $base_font-size + 6
+    font-color: 000000
+    font-family: $heading_h1_font_family
+    font-style: bold
+    text-transform: $heading_h1_text_transform
+  h5:
+    font-size: $base_font-size + 4
+    font-color: 000000
+    font-family: $heading_h1_font_family
+    font-style: bold
+    text-transform: $heading_h1_text_transform
+  h6:
+    font-size: $base_font-size + 2
+    font-color: 000000
+    font-family: $heading_h1_font_family
+    font-style: bold
+    text-transform: $heading_h1_text_transform
+  font-color: $base_font_color
+  font-family: $base_font_family
+  font-style: normal
+  line-height: 1
+  margin-top: 0.2
+  margin-bottom: 0.2
+
+##############################
+## Definición de la portada ##
+##############################
+title_page:
+  background-image: $fondo_portada
+  background-color: $color_fondo_portada
+  align: center
+  margin: [200 pt, 20 pt, 20 pt, 20 pt]
+  logo:
+    top: 190 pt
+    align: center
+    image: $logo_portada
+  title:
+    top: 425 pt
+    font-size: $base_font-size + 16
+    font-color: 000000
+    font-style: bold_italic
+    line-height: 1
+  subtitle:
+    margin-top: 115.0
+    font-size: $base_font-size + 8
+    font-color: 000000
+    font-style: bold_italic
+    line-height: 1
+  authors:
+    margin-top: 40.0
+    font-size: $base_font-size + 4
+    font-color: 000000
+    font-style: bold
+  revision:
+    margin-top: 5.0
+    font-size: $base_font-size + 2
+    font-color: 000000
+    font-style: bold
+
+########################################
+## Definición de las página generales ##
+########################################
+page:
+  background-color: ffffff
+  background-image: $fondo_contenido
+  layout: portrait
+  margin: [50 pt, 30 pt, 50 pt, 30 pt]
+  margin-inner: 0.75in
+  margin-outer: 0.59in
+  size: A4
+
+##########################################
+## Definición de la tabla de contenidos ##
+##########################################
+toc:
+  indent: 20
+  line-height: 1.4
+  h1:
+    font-size: $base_font-size + 2
+    font-color: 000000
+    font-family: Times-Roman
+    font-style: bold_italic
+    text-transform: none
+  h2:
+    font-size: $toc_h1_font_size
+    font-color: $toc_h1_font_color
+    font-family: $toc_h1_font_family
+    font-style: $toc_h1_font_style
+    text-transform: $toc_h1_text_transform
+  h3:
+    font-size: $toc_h1_font_size
+    font-color: $toc_h1_font_color
+    font-family: $toc_h1_font_family
+    font-style: $toc_h1_font_style
+    text-transform: $toc_h1_text_transform
+  h4:
+    font-size: $toc_h1_font_size
+    font-color: $toc_h1_font_color
+    font-family: $toc_h1_font_family
+    font-style: $toc_h1_font_style
+    text-transform: $toc_h1_text_transform
+  h5:
+    font-size: $toc_h1_font_size
+    font-color: $toc_h1_font_color
+    font-family: $toc_h1_font_family
+    font-style: $toc_h1_font_style
+    text-transform: $toc_h1_text_transform
+  h6:
+    font-size: $toc_h1_font_size
+    font-color: $toc_h1_font_color
+    font-family: $toc_h1_font_family
+    font-style: $toc_h1_font_style
+    text-transform: $toc_h1_text_transform
+  title:
+    align: left
+    font-color: 000000
+    font-family: Times-Roman
+    font-kerning: normal
+    font-size: $base_font-size + 14
+    font-style: bold
+    text-transform: none
+  dot_leader:
+    content: ' -'
+    font-color: $toc_h1_font_color
+    font-style: normal
+    levels: 0 1 2 3 4 5 6
+
+############################################
+## Definición de bloques literales/codigo ##
+############################################
+code:
+  background-color: EEEEEE
+  border-color: 000000
+  border-radius: 5
+  border-width: 1
+  font-color: 000000
+  font-size: $base_font-size
+  font-family: Courier
+  font-style: italic
+  padding: [2,5,3,5]
+  line-height: 1.1
+  line-gap: 3.8
+
+###################################
+## Definición de bloques example ##
+###################################
+example:
+  background-color: EEEEEE
+  border-color: 000000
+  border-radius: 5
+  border-width: 1
+  font-color: 000000
+  font-size: 12
+  font-family: Courier
+  font-style: italic
+  padding: [3,5,3,5]
+
+###################################
+## Definición de bloques Sidebar ##
+###################################
+sidebar:
+  background-color: F7F7F7
+  border-color: F7F7F7
+  border-radius: 5
+  border-width: 1
+  font-color: 000000
+  font-size: 12
+  font-family: Times-Roman
+  font-style: normal
+  padding: [3,5,3,5]
+  title:
+    align: center
+    font_color: $sidebar_font-color
+    font_family: $sidebar_font-family
+    font_size: 18
+    font_style: bold
+
+#####################################
+## Definición de bloques Abastract ##
+#####################################
+abstract:
+  font-color: 000000
+  font-size: 12
+  font-family: Times-Roman
+  font-style: normal
+  line_height: 1.4
+  first_line:
+    font_style: bold
+    font-color: 000000
+  title:
+    align: center
+    font_color: 000000
+    font_family: Times-Roman
+    font_size: 20
+    font_style: bold_italic
+    text-transform: none
+
+###############################
+## Definición de los enlaces ##
+###############################
+link:
+  font_color: 428bca
+
+##############################
+## Definición de las tablas ##
+##############################
+
+table:
+  background-color: ffffff
+  border-color: 000000
+  border-style: solid
+  border-width: 1
+  font-family: Times-Roman
+  font-size: 10
+  head:
+    background-color: $table_header_color
+    font-color: ffffff
+    font-family: Times-Roman
+    font-kerning: none
+    font-size: 10
+    font-style: bold_italic
+    font-transform: uppercase
+  body:
+    background-color: eeeeee
+    font-color: 000000
+    font-family: Times-Roman
+    font-size: 10
+    font-style: normal
+  foot:
+    background-color: 666666
+    font-color: ffffff
+    font-style: bold
+    font-size: 10
+    font-family: Times-Roman
+  cell:
+    padding: [2,4,2,4]
+
+################################
+## Definición de la cabecera  ##
+################################
+header:
+  background-color: FFFFFF
+  border-color: FFFFFF
+  border-style: solid
+  border-width: 0.25
+  font-color: 000000
+  font-family: Times-Roman
+  font-size: 10
+  font-style: bold
+  border-color: 2f2f33 #dddddd
+  height: 50pt
+  line-height: 1.2
+  margin: [0,0,0,0]
+  content-margin: [0,0,0,0]
+  padding: [2, 0, 2, 0]
+  image-vertical-align: middle
+  seclevels: 2
+  text-transform: none
+  title-style: toc
+  vertical-align: middle
+  recto:
+    columns: <17% =66% >17%
+    left:
+      content: image:ricoh_logo.svg[width=120,height=30]
+    center:
+      content: '[.head-font-10]*_{Titulo}_&#10;{Subtitulo}*'
+    right:
+      content: '*Fecha: {revdate}&#10;{version-label} {revnumber}*'
+  verso:
+    columns: $header_recto_columns
+    right: 
+      content: $header_recto_right_content
+    center:
+      content: $header_recto_center_content
+    left: 
+      content: $header_recto_left_content
+
+##################################
+## Definición del pie de página ##
+##################################
+footer:
+  background-color: FFFFFF
+  border-color: FFFFFF
+  border-style: solid
+  border-width: 0.25
+  font-color: 000000
+  font-family: Times-Roman
+  font-size: 10
+  font-style: bold
+  border-color: 2f2f33 #dddddd
+  height: 50pt
+  line-height: 1.2
+  margin: [0,0,0,0]
+  content-margin: [0,5,0,5]
+  padding: [2, 2, 2, 2]
+  image-vertical-align: middle
+  seclevels: 2
+  text-transform: none
+  title-style: toc
+  vertical-align: middle
+  recto:
+    columns: =10% =80% =10%
+    left: 
+      content: ''
+    center:
+      content: '{PDFFileName}'
+    right:
+      content: 'Pag. {page-number}/{page-count}'
+  verso:
+    left:
+      content: $footer_recto_left_content
+    center:
+      content: $footer_recto_center_content
+    right:
+      content: $footer_recto_right_content
+
+#########################################
+## Definición de las description lists ##
+#########################################
+description_list:
+  term-font-color: 000000
+  term-font-family: Times-Roman
+  term-font-kerning: none
+  term-font-size: 12
+  term_font_style: bold
+  term-text-transform: none
+  term-line-height: 1.0
+  term_spacing: 3
+  description_indent: 1.5
+
+#################################################
+## Definición de las description outline lists ##
+#################################################
+outline_list:
+  indent: 15
+  item_spacing: 0.5
+  marker-font-color: 000000
+  text-align: left
+
+################################
+## Definición de las imagenes ##
+################################
+image:
+  align: center
+  alt:
+    content: "Carga de imagen erronea - %{alt} (%{target})"
+    font-color: FF0000
+    font-family: Times-Roman
+    font-kerning: none
+    font-size: 18
+    font-style: bold
+  caption:
+    align: center
+    caption-text-align: center
+    caption-max-width: fit-content
+
+################################################################################
+## Definición de la separación entre bloques:                                 ##
+## admonition, example, quote, verse, sidebar, image, listing, literal, table ##
+################################################################################
+block:
+  margin_top: 1
+  margin_bottom: 1
+
+################################
+## Definición de las Caption ##
+################################
+caption:
+  align: left
+  font-color: 000000
+  font-family: Times-Roman
+  font-kerning: none
+  font_size: 8
+  font_style: italic
+  text-decoration: none
+  text-decoration-color: 000000
+  text-decoration-width: 0.5
+  text-transform: none
+  margin_inside: 0
+  margin_outside: 0
+
+############################
+## Definición de los Lead ##
+############################
+lead:
+  font-color: 000000
+  font-family: Times-Roman
+  font-kerning: none
+  font_size: 12
+  font_style: normal
+  text-transform: none
+  line_height: 1.4
+
+##################################
+## Definición de los Adminition ##
+##################################
+admonition:
+  column_rule_color: 000000
+  column-rule-style: solid
+  column_rule_width: 1.5
+  font-color: 000000
+  font-family: Times-Roman
+  font-kerning: none
+  font-size: 12
+  font-style: normal
+  text-transform: none
+  padding: [0, 5, 0, 5]
+  label:
+    align: center
+    min-width: 12
+    padding: [0,12,0,12]
+    vertical-align: middle
+  icon:
+    tip:
+      name: fas-fire
+      stroke-color: ff0000
+      size: 20
+
+#######################################
+## Definición de la linea horizontal ##
+#######################################
+thematic_break:
+  border_color: 000000
+  border_style: solid
+  border_width: 0.5
+  margin_top: 5
+  margin_bottom: 5

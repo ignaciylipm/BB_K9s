@@ -1,0 +1,52 @@
+.Documentación asociada
+
+* https://k9scli.io/
+* https://github.com/derailed/k9s
+* https://k9scli.io/topics/skins/
+
+
+
+.Creamos el usuario
+....
+useradd -m -d /home/k9suser k9suser
+....
+
+.Creamos el usuario 
+....
+su - k9suser
+....
+
+.Creamos una carpeta para descargar los fuentes
+....
+mkdir source
+cd source
+git clone https://github.com/derailed/k9s.git .
+....
+
+
+.Instalmos las Herramientas de Desarrollo
+....
+yum -y groupinstall "Development Tools"
+yum -y install go
+....
+
+.Instalamos
+
+sudo install ./k9s /usr/bin
+
+
+
+.Instalar el metric server para que se pueda mostrar estadisticas de CPU y Memoria::
+
+wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml -O metrics-server-components.yaml
+kubectl patch deployment metrics-server -n kube-system --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
+
+.Install xclip
+
+....
+dnf install epel-release
+
+....
+
+
+
