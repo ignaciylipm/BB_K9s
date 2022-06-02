@@ -12,8 +12,8 @@
 :version-label: Ver.
 :revnumber: 1.0
 :revdate: {localdate}
-:Titulo: Office365Connector
-:Subtitulo: Plugin Jenkins
+:Titulo: Utilidad K9S
+:Subtitulo: 
 :author: Ricoh Sistemas
 :Subject: {Subtitulo}
 :Keywords: Jenkins
